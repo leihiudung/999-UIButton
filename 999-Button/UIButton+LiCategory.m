@@ -60,7 +60,9 @@
 //    UIControlContentHorizontalAlignment
     [self setContentHorizontalAlignment:alignment];
     // 下面的方法必须在 setContentVertical...之后方能起作用
-    
+    CGFloat diffT = fabs(self.titleLabel.center.x - self.center.x);
+    CGFloat diffI = fabs(self.imageView.center.x - self.center.x);
+
     CGFloat marginT = self.titleLabel.frame.size.width; // 取 titleLabel 的高度
     CGFloat marginI = self.imageView.frame.size.width;
     
